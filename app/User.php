@@ -37,6 +37,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function contacts() {
+        return $this->hasMany('App\Contact');
+    }
 
     /* TODO Relation pour récupérer les contacts d'un utilisateur */
 }
